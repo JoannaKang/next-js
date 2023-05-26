@@ -1,3 +1,3 @@
 export default function ProductsPage() {
-  return <h1>index page</h1>;
+  return <h1>product page</h1>;
 }
