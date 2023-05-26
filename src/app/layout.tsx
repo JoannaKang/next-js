@@ -1,5 +1,6 @@
 import styles from "./layout.module.css";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,12 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning={true}>
         <header className={styles.header}>
           <h1>Demo</h1>
           <nav className={styles.nav}>
-            <a href="a">Contact</a>
-            <a href="b">About</a>
+            <Link href="/contact">Contact</Link>
+            <Link href="/about">About</Link>
+            <Link href="/products">Products</Link>
           </nav>
         </header>
         {children}

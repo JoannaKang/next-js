@@ -1,3 +1,17 @@
+import Link from "next/link";
+
+const products = ["pants", "skirt", "shirt", "jacket"];
+
 export default function ProductsPage() {
-  return <h1>product page</h1>;
+  return (
+    <>
+      {products.map((product, index) => {
+        return (
+          <li key={index}>
+            <Link href={`/products/${product}`}>{product}</Link>
+          </li>
+        );
+      })}
+    </>
+  );
 }
