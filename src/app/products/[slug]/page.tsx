@@ -1,8 +1,17 @@
+import { Metadata } from "next";
+
 type Props = {
   params: {
     slug: string;
   };
 };
+
+export function generateMetaData({ params }: Props): Metadata {
+  return {
+    title: `Product name: ${params.slug}`,
+  };
+}
+
 // Dynamic Routing
 export default function Products({ params }: Props) {
   return <h1> {params.slug} items</h1>;
