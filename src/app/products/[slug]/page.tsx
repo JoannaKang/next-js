@@ -6,11 +6,11 @@ type Props = {
   };
 };
 
-export function generateMetaData({ params }: Props): Metadata {
-  return {
-    title: `Product name: ${params.slug}`,
-  };
-}
+// export function generateMetaData({ params }: Props): Metadata {
+//   return {
+//     title: `Product name: ${params.slug}`,
+//   };
+// }
 
 // Dynamic Routing
 export default function Products({ params }: Props) {
